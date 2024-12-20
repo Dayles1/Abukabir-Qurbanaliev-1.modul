@@ -6,13 +6,12 @@ require_once '../config/database.php';
 require_once '../app/Controllers/PostController.php';
 require_once '../app/Controllers/UserController.php'; 
 
-// Routingni sozlash
 $router = new Router();
 $router->get('/users/registr', 'UserController@registr');
 $router->get('/users/login', 'UserController@login');
 $router->post('/users/handleRegistr', 'UserController@handleRegistr');
 $router->post('/users/handleLogin', 'UserController@handleLogin');
-// $router->get('/users/registrCss', 'UserController@registrCss');
+
 
 $router->get('/login', 'UserController@login');
 $router->get('/', 'UserController@index');
